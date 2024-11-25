@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplikasi AR dengan A-Frame</title>
+    <!-- Memuat A-Frame dan AR.js -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marker 1: Hiro -->
+      <a-marker preset="pattern-Hiro_marker_ARjs.patt">
+        <a-box position="0 0.5 0" material="color: red;"></a-box>
+      </a-marker>
+
+      <!-- Marker 2: Kanji -->
+      <a-marker preset="pattern-Kanji_marker_ARjs.patt">
+        <a-sphere position="0 0.5 0" radius="0.5" material="color: blue;"></a-sphere>
+      </a-marker>
+
+      <!-- Kamera AR -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

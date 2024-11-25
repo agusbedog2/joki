@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aplikasi AR dengan A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Marker 1 -->
+      <a-marker preset="custom" type="pattern" url="marker1.patt">
+        <a-entity gltf-model="objek1.gltf" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+      </a-marker>
+
+      <!-- Marker 2 -->
+      <a-marker preset="custom" type="pattern" url="marker2.patt">
+        <a-entity gltf-model="objek2.gltf" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+      </a-marker>
+
+      <!-- Kamera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
